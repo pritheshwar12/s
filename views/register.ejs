@@ -1,0 +1,46 @@
+<%- include("partials/header"); -%>
+
+
+<div class="centered">
+  <div class=" cen">
+
+
+    <form class="" name="myForm" action="/volunter" method="post"  onsubmit="return validateForm()">
+      <div class="form-group">
+        <label>NAME <span>(Only alphabets and numbers)</span></label>
+        <br>
+        <input class="" type="text" name="name" placeholder=" ENTER Name" pattern="[A-Za-z0-9]{1,20}"><br>
+        <label>Email</label>
+        <br>
+        <input class="" type="email" name="email" placeholder="ENTER EMAIL"><br>
+        <label>PHONE NUMBER </label>
+        <br>
+        <select class="" name="pin">
+          <option value="91">91</option>
+          <option value="92">92</option>
+          <option value="93">93</option>
+        </select>
+        <input type="tel" name="phone" value="" pattern="[6789][0-9]{9}" placeholder="Phone">
+        <br>
+        <label >PASSWORD</label><br>
+        <input type="password" name="password" placeholder="ENTER PASSWORD" id="myInput" value="123456">
+        <!-- <input type="text" name="" placeholder="Create password" id="password" readonly> -->
+        <button type="button" class="ap"name="auto-password" onclick="genPassword()">Auto Generate Password</button>
+        <br>
+        <input type="checkbox" onclick="myFunction()"> <span  class="cp">Show Password</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <button type="button" name=""onclick="copyPassword()" value=""> <span class="cp">Copy</span></button>
+        <br>
+        <label>Address</label>
+        <br>
+        <textarea class="" name="address" rows="5" cols="30" placeholder="ENTER ADDRESS"></textarea>
+      </div>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button class="btn btn-primary" type="submit" name="button">REGISTER</button>
+    </form>
+
+  </div>
+</div>
+
+<%- include("partials/footer"); -%>

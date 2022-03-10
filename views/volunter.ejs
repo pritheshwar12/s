@@ -1,0 +1,33 @@
+<%- include("partials/header"); -%>
+<% var count =0 %>
+<%  records.forEach(function(record){ %>
+  <% count=count+1; %>
+<% }) %>
+<h1>Registered volunters <%=count%></h1>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button type="button" class="btn btn-lg btn-success l" name="button"><a href="/em">EMERGENCY</a></button>
+
+<%  records.forEach(function(record){ %>
+
+<div class="disc">
+
+
+  <div class="card ccard" style="width: 50rem;">
+    <div class="card-header">
+
+    </div>
+    <ul class="list-group list-group-flush">
+      <h6 class="list-group-item lip"><%=record.name%></h6>
+      <li class="list-group-item lip"><%=record.email %></li>
+      <li class="list-group-item lip"><%=record.countryCode +"+ "+record.phone %></li>
+      <li class="list-group-item flow lip"><%=record.address %></li>
+    </ul>
+
+  </div>
+</div>
+
+
+
+<% }) %>
+
+<%- include("partials/footer"); -%>
